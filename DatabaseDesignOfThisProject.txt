@@ -1,0 +1,49 @@
+﻿
+MSSQL is used with this project.
+Queries are given below.
+
+********************************************
+create database pharmacymanagementsystem;
+
+***********************************
+
+create table users(
+
+id int identity(1,1) primary key,
+userRole varchar(50) not null,        //is he admin or pharmacist!
+fname varchar(250) not null,
+dob varchar(250) not null,
+userid bigint not null,
+email varchar(250) not null ,
+username varchar(250) unique not null,
+pass varchar(250) not null
+
+);
+
+**************************************
+
+create table Medicine(
+
+id int identity(1,1) primary key,    //id of rows
+medid varchar(250) not null,         //specific to medicine , It is same for all aspirin boxes in stock
+medname varchar(250) not null,       //name like aspirin etc...
+mednumber varchar(250) not null,     //Serial Number or LOT number ,specific to each aspirin boxes!
+medManDate varchar(250) not null,    //manufacturing date
+medExpDate varchar(250) not null,    //expiry date
+medQty bigint not null,              //quantity
+medPrice bigint not null             //price per unit
+
+);
+
+***************************END*******************************
+
+
+
+
+
+
+
+
+
+
+

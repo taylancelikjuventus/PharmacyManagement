@@ -1,0 +1,30 @@
+﻿
+User can be admin or pharmacist.
+Note : To run this project first you have to create user type in user table of Database.
+       userRole should be "Administrator" or "Pharmacist" because code checks it according to
+       those names.
+
+Or use following usernames and passwords.
+
+For Admin panel (login as administrator)         //ignore wrong username message.
+username:adm
+password:adm
+
+For Pharmacist Panel (login as pharmacist)
+username:phar
+password:phar
+**********************************************************
+
+Admin can add new pharmacists,manage his profile.
+
+Pharmacist can add,edit,sell,view medicine.After selling medicine he prints an invoice.
+Pharmacist's dashboard has a chart that shows the number of valid/invalid medicines.
+
+All refresh buttons updates the data returned from Database.
+
+*******************************END********************************************
+
+
+
+
+

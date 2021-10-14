@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27B82374-58BD-45EE-8548-4CCE37F13211}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PharmacyManagementSystem</RootNamespace>
+    <AssemblyName>PharmacyManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator.Designer.cs">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorControlForms\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorControlForms\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorControlForms\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorControlForms\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorControlForms\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorControlForms\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorControlForms\ViewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorControlForms\ViewUser.Designer.cs">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBfunc.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pharmacist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pharmacist.Designer.cs">
+      <DependentUpon>Pharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistControlForms\PharAddMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistControlForms\PharAddMed.Designer.cs">
+      <DependentUpon>PharAddMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistControlForms\pharCheckMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistControlForms\pharCheckMedicine.Designer.cs">
+      <DependentUpon>pharCheckMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistControlForms\PharDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistControlForms\PharDashboard.Designer.cs">
+      <DependentUpon>PharDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistControlForms\pharModifyMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistControlForms\pharModifyMed.Designer.cs">
+      <DependentUpon>pharModifyMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistControlForms\pharViewMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistControlForms\pharViewMedicine.Designer.cs">
+      <DependentUpon>pharViewMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistControlForms\SellMEdicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistControlForms\SellMEdicine.Designer.cs">
+      <DependentUpon>SellMEdicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrator.resx">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorControlForms\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorControlForms\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorControlForms\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorControlForms\ViewUser.resx">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pharmacist.resx">
+      <DependentUpon>Pharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistControlForms\PharAddMed.resx">
+      <DependentUpon>PharAddMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistControlForms\pharCheckMedicine.resx">
+      <DependentUpon>pharCheckMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistControlForms\PharDashboard.resx">
+      <DependentUpon>PharDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistControlForms\pharModifyMed.resx">
+      <DependentUpon>pharModifyMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistControlForms\pharViewMedicine.resx">
+      <DependentUpon>pharViewMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistControlForms\SellMEdicine.resx">
+      <DependentUpon>SellMEdicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseDesignOfThisProject.txt" />
+    <Content Include="ProjectDetails.txt" />
+    <Content Include="Pharmacy Management System in C#\1.png" />
+    <Content Include="Pharmacy Management System in C#\pharmacistIcon.png" />
+    <Content Include="Pharmacy Management System in C#\administrator-icon.png" />
+    <Content Include="Pharmacy Management System in C#\btnRefreshIcon.png" />
+    <Content Include="Pharmacy Management System in C#\dashboardPage.png" />
+    <Content Include="Pharmacy Management System in C#\dashboard2.jpg" />
+    <Content Include="Pharmacy Management System in C#\pharmacyLogin2.png" />
+    <Content Include="Pharmacy Management System in C#\logout2.png" />
+    <Content Include="Pharmacy Management System in C#\loginSignin.png" />
+    <Content Include="Pharmacy Management System in C#\addMedic_48px.png" />
+    <Content Include="Pharmacy Management System in C#\addUser.png" />
+    <Content Include="Pharmacy Management System in C#\add_to_cart_40px.png" />
+    <Content Include="Pharmacy Management System in C#\admin2.png" />
+    <Content Include="Pharmacy Management System in C#\cancel_25px.png" />
+    <Content Include="Pharmacy Management System in C#\Close all jframe.png" />
+    <Content Include="Pharmacy Management System in C#\MedicineValidation_40px.png" />
+    <Content Include="Pharmacy Management System in C#\modifyMedicine_32px.png" />
+    <Content Include="Pharmacy Management System in C#\no.png" />
+    <Content Include="Pharmacy Management System in C#\medicineIcon.jpg" />
+    <Content Include="Pharmacy Management System in C#\purchase_40px.png" />
+    <Content Include="Pharmacy Management System in C#\remove_25px.png" />
+    <Content Include="Pharmacy Management System in C#\remove_64px.png" />
+    <Content Include="Pharmacy Management System in C#\reset_25px.png" />
+    <Content Include="Pharmacy Management System in C#\save.png" />
+    <Content Include="Pharmacy Management System in C#\search.png" />
+    <Content Include="Pharmacy Management System in C#\search_25px.png" />
+    <Content Include="Pharmacy Management System in C#\sellMedicine_64px.png" />
+    <Content Include="Pharmacy Management System in C#\signin_100px.png" />
+    <Content Include="Pharmacy Management System in C#\signup_64px.png" />
+    <Content Include="Pharmacy Management System in C#\update_64px.png" />
+    <Content Include="Pharmacy Management System in C#\user.png" />
+    <Content Include="Pharmacy Management System in C#\view_64px.png" />
+    <Content Include="Pharmacy Management System in C#\yes.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
